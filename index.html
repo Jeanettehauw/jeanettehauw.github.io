@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeanette Hauw</title>
+    <title>Jeanette Hauw - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Base Setup: Minimalist & Clean */
+        /* Base Setup: Blue Theme */
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #f9fafb; 
-            color: #374151; 
+            background-color: #f0fdf4; /* Fallback */
+            background: #f0f6ff; /* Soft light blue background */
+            color: #334155; 
             margin: 0; 
             padding: 0; 
             line-height: 1.6;
         }
 
-        /* Header: Simple and Professional */
+        /* Header: Deep Blue Gradient */
         header { 
-            background: #ffffff; 
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: #ffffff;
             padding: 4rem 1rem; 
             text-align: center; 
-            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile Picture Styling */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         
         header h1 { 
             margin: 0; 
             font-size: 2.5rem; 
-            color: #111827; 
             font-weight: 700; 
             letter-spacing: -0.5px;
         }
@@ -35,110 +47,142 @@
         header p { 
             margin: 0.5rem 0 0; 
             font-size: 1.1rem; 
-            color: #6b7280; 
+            color: #bfdbfe; /* Light blue text */
         }
 
-        /* Social Links: Clean Buttons */
+        /* Social Links */
         .social-links { margin-top: 1.5rem; }
         .social-links a { 
             display: inline-block;
             background: #ffffff; 
-            color: #111827; 
+            color: #1d4ed8; 
             text-decoration: none; 
             margin: 0 8px; 
-            padding: 10px 20px;
-            border-radius: 6px; 
-            font-weight: 500; 
+            padding: 10px 24px;
+            border-radius: 50px; 
+            font-weight: 600; 
             font-size: 0.95rem;
-            border: 1px solid #d1d5db;
-            transition: all 0.2s ease; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease; 
         }
         
         .social-links a:hover { 
-            background: #f3f4f6;
-            border-color: #9ca3af;
+            background: #dbeafe;
+            transform: translateY(-2px);
         }
 
         /* Main Container */
-        .container { max-width: 768px; margin: 3rem auto; padding: 0 20px; }
+        .container { max-width: 900px; margin: 3rem auto; padding: 0 20px; }
         
-        /* Section: Flat and Clean Cards */
+        /* Section Styling */
         section { 
             background: #ffffff; 
             padding: 2.5rem; 
             margin-bottom: 2rem; 
-            border-radius: 12px; 
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+            border-radius: 16px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
         }
 
         h2 { 
-            color: #111827; 
-            border-bottom: 2px solid #f3f4f6; 
+            color: #1e3a8a; 
+            border-bottom: 2px solid #bfdbfe; 
             padding-bottom: 0.8rem; 
             margin-top: 0; 
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
         }
 
         /* About Text Styles */
-        .about-text ul {
-            margin-top: 0.5rem;
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-            color: #4b5563;
-        }
-        .about-text li {
-            margin-bottom: 0.3rem;
-        }
-        .about-text h4 {
-            color: #111827;
-            margin-bottom: 0.2rem;
-            font-size: 1.05rem;
-        }
+        .about-text ul { padding-left: 1.5rem; color: #475569; }
+        .about-text li { margin-bottom: 0.3rem; }
+        .about-text h4 { color: #0f172a; margin-bottom: 0.2rem; margin-top: 1.5rem; font-size: 1.1rem; }
 
         /* Tech Stack Styles */
         .stack-category { margin-bottom: 1.5rem; }
-        .stack-category:last-child { margin-bottom: 0; }
-        .stack-category h3 { margin-bottom: 0.5rem; color: #1f2937; font-size: 1.05rem; font-weight: 600; }
+        .stack-category h3 { margin-bottom: 0.5rem; color: #1e40af; font-size: 1.1rem; font-weight: 600; }
 
-        /* Project Details */
-        .project { margin-bottom: 2rem; }
-        .project:last-child { margin-bottom: 0; }
-        .project h3 { margin-bottom: 0.3rem; color: #1f2937; font-size: 1.2rem; }
-        .project p { margin: 0; color: #4b5563; font-size: 1rem; }
-        
-        /* Skill tags: Simple Gray Badges */
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
-        .tag { 
-            background: #f3f4f6;
-            color: #4b5563; 
-            padding: 0.3rem 0.8rem; 
-            border-radius: 6px; 
-            font-size: 0.85rem; 
-            font-weight: 500;
-            border: 1px solid #e5e7eb;
+        /* Project Grid Setup */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
         }
 
-        /* Minimal Footer */
+        /* Project Cards */
+        .project-card { 
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.1);
+            border-color: #93c5fd;
+        }
+
+        /* Project Images */
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Project Content */
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 { margin: 0 0 0.5rem 0; color: #1e3a8a; font-size: 1.25rem; }
+        .project-content p { margin: 0 0 1rem 0; color: #475569; font-size: 0.95rem; flex-grow: 1; }
+        
+        /* Tags styling (Blue Tint) */
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { 
+            background: #eff6ff;
+            color: #1d4ed8; 
+            padding: 0.4rem 0.8rem; 
+            border-radius: 8px; 
+            font-size: 0.8rem; 
+            font-weight: 600;
+            border: 1px solid #bfdbfe;
+        }
+
         footer { 
             text-align: center; 
             padding: 2rem; 
-            color: #9ca3af; 
+            color: #64748b; 
             font-size: 0.9rem; 
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 600px) {
+            .project-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- PROFILE PICTURE: Ganti URL di src="" dengan link foto asli kamu -->
+        <img src="https://ui-avatars.com/api/?name=Jeanette+Hauw&background=eff6ff&color=1e3a8a&size=150" alt="Jeanette Hauw" class="profile-img">
+        
         <h1>Jeanette Hauw</h1>
         <p>AI & Computer Science Student</p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; font-weight: 500;">Always learning. Ready to work.</p>
+        <p style="font-size: 1rem; margin-top: 0.4rem; font-weight: 500; color: #ffffff;">Always learning. Ready to work.</p>
         
         <div class="social-links">
             <a href="https://github.com/Jeanettehauw?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/jeanette-hauw-chandra/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
     </header>
 
@@ -198,78 +242,93 @@
                     <span class="tag">Medallion Architecture</span>
                 </div>
             </div>
-
-            <div class="stack-category">
-                <h3>Software & Tools</h3>
-                <div class="tags">
-                    <span class="tag">Android Studio</span>
-                    <span class="tag">Retrofit</span>
-                    <span class="tag">Git</span>
-                </div>
-            </div>
         </section>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
+        <section id="projects" style="background: transparent; box-shadow: none; padding: 0;">
+            <h2 style="padding-left: 1rem; border: none;">Featured Projects</h2>
             
-            <div class="project">
-                <h3>Automated Short Answer Scoring (Thesis)</h3>
-                <p>Designed and developed an automated scoring model utilizing SBERT and CNN architectures to evaluate and accurately grade short-form academic text responses.</p>
-                <div class="tags">
-                    <span class="tag">NLP</span>
-                    <span class="tag">SBERT</span>
-                    <span class="tag">CNN</span>
-                    <span class="tag">Python</span>
+            <div class="project-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="NLP Project" class="project-img">
+                    <div class="project-content">
+                        <h3>Automated Short Answer Scoring</h3>
+                        <p>Designed and developed an automated scoring model utilizing SBERT and CNN architectures to evaluate and accurately grade short-form academic text responses.</p>
+                        <div class="tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">SBERT</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <h3>Comparative Analysis of ASR Systems</h3>
-                <p>Conducted extensive research and evaluation on the comparative accuracy of Automatic Speech Recognition (ASR) systems tailored for both Indonesian and English languages.</p>
-                <div class="tags">
-                    <span class="tag">Speech Recognition</span>
-                    <span class="tag">Audio Systems</span>
-                    <span class="tag">Model Evaluation</span>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Audio Waveform" class="project-img">
+                    <div class="project-content">
+                        <h3>Comparative Analysis of ASR Systems</h3>
+                        <p>Conducted extensive research and evaluation on the comparative accuracy of Automatic Speech Recognition (ASR) systems tailored for both Indonesian and English languages.</p>
+                        <div class="tags">
+                            <span class="tag">Speech Recognition</span>
+                            <span class="tag">Model Evaluation</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <h3>Azure End-to-End Data Pipeline</h3>
-                <p>Implemented the Medallion Architecture for retail sales analytics, building a scalable data engineering pipeline to process large datasets.</p>
-                <div class="tags">
-                    <span class="tag">Azure Data Factory</span>
-                    <span class="tag">Databricks</span>
-                    <span class="tag">Data Engineering</span>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Dashboard" class="project-img">
+                    <div class="project-content">
+                        <h3>Azure End-to-End Data Pipeline</h3>
+                        <p>Implemented the Medallion Architecture for retail sales analytics, building a scalable data engineering pipeline to process large datasets.</p>
+                        <div class="tags">
+                            <span class="tag">Azure</span>
+                            <span class="tag">Databricks</span>
+                            <span class="tag">Data Engineering</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <h3>Android User List Application</h3>
-                <p>Developed a mobile application to fetch and display user data, integrating RESTful APIs to manage backend communications efficiently.</p>
-                <div class="tags">
-                    <span class="tag">Kotlin</span>
-                    <span class="tag">Retrofit</span>
-                    <span class="tag">Mobile Development</span>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Healthcare AI" class="project-img">
+                    <div class="project-content">
+                        <h3>Warfarin Dosage Predictor</h3>
+                        <p>Built a predictive machine learning model utilizing the PharmGKB dataset to determine optimal drug dosage recommendations based on patient characteristics.</p>
+                        <div class="tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Bioinformatics</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <h3>Warfarin Dosage Predictor</h3>
-                <p>Built a predictive machine learning model utilizing the PharmGKB dataset to determine optimal drug dosage recommendations based on patient characteristics.</p>
-                <div class="tags">
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Feature Engineering</span>
-                    <span class="tag">Bioinformatics</span>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mobile App" class="project-img">
+                    <div class="project-content">
+                        <h3>Android User List Application</h3>
+                        <p>Developed a mobile application to fetch and display user data, integrating RESTful APIs to manage backend communications efficiently.</p>
+                        <div class="tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Retrofit</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <h3>HealthierBot</h3>
-                <p>Created a conversational AI chatbot focused on helping users track their diet, manage calorie intake, and maintain healthy eating habits.</p>
-                <div class="tags">
-                    <span class="tag">Chatbot</span>
-                    <span class="tag">System Design</span>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Healthy Diet" class="project-img">
+                    <div class="project-content">
+                        <h3>HealthierBot</h3>
+                        <p>Created a conversational AI chatbot focused on helping users track their diet, manage calorie intake, and maintain healthy eating habits.</p>
+                        <div class="tags">
+                            <span class="tag">Chatbot</span>
+                            <span class="tag">System Design</span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
 
