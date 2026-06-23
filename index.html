@@ -3,109 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeanette Hauw - E-Portfolio</title>
+    <title>Jeanette Hauw</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base Setup: Minimalist & Clean */
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f9fafb; 
+            color: #374151; 
             margin: 0; 
             padding: 0; 
-            background-color: #f8fafc; 
+            line-height: 1.6;
         }
-        
+
+        /* Header: Simple and Professional */
         header { 
-            background: #0f172a; 
-            color: #f8fafc; 
-            padding: 3rem 0; 
+            background: #ffffff; 
+            padding: 4rem 1rem; 
             text-align: center; 
+            border-bottom: 1px solid #e5e7eb;
         }
-        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: -0.5px; }
-        header p { margin: 0.5rem 0 0; font-size: 1.2rem; color: #cbd5e1; }
         
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            color: #111827; 
+            font-weight: 700; 
+            letter-spacing: -0.5px;
+        }
+        
+        header p { 
+            margin: 0.5rem 0 0; 
+            font-size: 1.1rem; 
+            color: #6b7280; 
+        }
+
+        /* Social Links: Clean Buttons */
         .social-links { margin-top: 1.5rem; }
         .social-links a { 
             display: inline-block;
-            background: #38bdf8; 
-            color: #0f172a; 
+            background: #ffffff; 
+            color: #111827; 
             text-decoration: none; 
-            margin: 0 10px; 
+            margin: 0 8px; 
             padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600; 
-            transition: background 0.3s, transform 0.2s; 
+            border-radius: 6px; 
+            font-weight: 500; 
+            font-size: 0.95rem;
+            border: 1px solid #d1d5db;
+            transition: all 0.2s ease; 
         }
-        .social-links a:hover { background: #7dd3fc; transform: translateY(-2px); }
         
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 20px; }
+        .social-links a:hover { 
+            background: #f3f4f6;
+            border-color: #9ca3af;
+        }
+
+        /* Main Container */
+        .container { max-width: 768px; margin: 3rem auto; padding: 0 20px; }
+        
+        /* Section: Flat and Clean Cards */
         section { 
             background: #ffffff; 
-            padding: 2rem; 
+            padding: 2.5rem; 
             margin-bottom: 2rem; 
             border-radius: 12px; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03); 
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
         }
-        h2 { color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 0; }
-        
+
+        h2 { 
+            color: #111827; 
+            border-bottom: 2px solid #f3f4f6; 
+            padding-bottom: 0.8rem; 
+            margin-top: 0; 
+            font-size: 1.5rem;
+        }
+
+        /* About Text Styles */
+        .about-text ul {
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #4b5563;
+        }
+        .about-text li {
+            margin-bottom: 0.3rem;
+        }
+        .about-text h4 {
+            color: #111827;
+            margin-bottom: 0.2rem;
+            font-size: 1.05rem;
+        }
+
+        /* Project Details */
         .project { margin-bottom: 2rem; }
         .project:last-child { margin-bottom: 0; }
-        .project h3 { margin-bottom: 0.3rem; color: #1e293b; }
-        .project p { margin: 0; color: #475569; }
+        .project h3 { margin-bottom: 0.3rem; color: #1f2937; font-size: 1.2rem; }
+        .project p { margin: 0; color: #4b5563; font-size: 1rem; }
         
-        .tags { margin-top: 0.8rem; }
+        /* Skill tags: Simple Gray Badges */
+        .tags { margin-top: 0.8rem; display: flex; flex-wrap: wrap; }
         .tag { 
-            background: #f1f5f9; 
-            color: #475569; 
+            background: #f3f4f6;
+            color: #4b5563; 
             padding: 0.3rem 0.8rem; 
-            border-radius: 20px; 
-            font-size: 0.85rem; 
+            border-radius: 6px; 
+            font-size: 0.8rem; 
             font-weight: 500;
             margin-right: 0.5rem; 
             margin-bottom: 0.5rem;
-            display: inline-block; 
-            border: 1px solid #e2e8f0;
+            border: 1px solid #e5e7eb;
         }
 
-        footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.9rem; }
+        /* Minimal Footer */
+        footer { 
+            text-align: center; 
+            padding: 2rem; 
+            color: #9ca3af; 
+            font-size: 0.9rem; 
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Jeanette Hauw</h1>
-        <p>Computer Science & Bioinformatics</p>
+        <p>AI & Computer Science Student</p>
+        <p style="font-size: 0.95rem; margin-top: 0.4rem; font-weight: 500;">Always learning. Ready to work.</p>
         
         <div class="social-links">
-            <a href="https://github.com/jeanettehauw" target="_blank" rel="noopener noreferrer">GitHub</a>
-            
-            <a href="https://www.linkedin.com/in/jeanette-hauw-chandra/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Jeanettehauw?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
     </header>
 
     <div class="container">
         
-        <section id="about">
+        <section id="about" class="about-text">
             <h2>About Me</h2>
-            <p>I am a Computer Science student specializing in Bioinformatics. I have a strong focus on machine learning, natural language processing, and cloud-native data architectures. I enjoy building systems that extract actionable insights from complex datasets, ranging from healthcare analytics to robust data engineering pipelines.</p>
+            <p>I am an AI & Computer Science student with a strong interest in Machine Learning, Speech Recognition, and intelligent systems. This portfolio is a collection of my learning journey—from fundamentals to applied projects. I’m comfortable reading research papers, experimenting with models, and turning ideas into working code.</p>
+            
+            <h4>I’ve worked on multiple projects across:</h4>
+            <ul>
+                <li>Machine Learning & Deep Learning</li>
+                <li>Data preprocessing & feature engineering</li>
+                <li>Speech & audio-based systems</li>
+                <li>Recommendation systems</li>
+                <li>Model evaluation & experimentation</li>
+            </ul>
+
+            <h4>Currently:</h4>
+            <ul>
+                <li>Building ML/DL projects</li>
+                <li>Writing my thesis about Automated Short Answer Scoring</li>
+                <li>Preparing myself to step into the industry</li>
+            </ul>
         </section>
 
         <section id="projects">
             <h2>Featured Projects</h2>
             
             <div class="project">
-                <h3>Automated Short Answer Scoring System</h3>
+                <h3>Automated Short Answer Scoring (Thesis)</h3>
                 <p>Designed and developed an automated scoring model utilizing SBERT and CNN architectures to evaluate and accurately grade short-form academic text responses.</p>
                 <div class="tags">
                     <span class="tag">NLP</span>
+                    <span class="tag">Deep Learning</span>
                     <span class="tag">SBERT</span>
-                    <span class="tag">CNN</span>
                     <span class="tag">Python</span>
                 </div>
             </div>
 
             <div class="project">
+                <h3>Comparative Analysis of ASR Systems</h3>
+                <p>Conducted extensive research and evaluation on the comparative accuracy of Automatic Speech Recognition (ASR) systems tailored for both Indonesian and English languages.</p>
+                <div class="tags">
+                    <span class="tag">Speech Recognition</span>
+                    <span class="tag">Audio Systems</span>
+                    <span class="tag">Model Evaluation</span>
+                </div>
+            </div>
+
+            <div class="project">
                 <h3>Azure End-to-End Data Pipeline</h3>
-                <p>Implemented the Medallion Architecture for retail sales analytics, building a comprehensive, scalable data engineering pipeline to process and analyze large datasets.</p>
+                <p>Implemented the Medallion Architecture for retail sales analytics, building a scalable data engineering pipeline to process large datasets.</p>
                 <div class="tags">
                     <span class="tag">Azure Data Factory</span>
                     <span class="tag">Databricks</span>
@@ -115,20 +197,20 @@
 
             <div class="project">
                 <h3>Warfarin Dosage Predictor</h3>
-                <p>Built a predictive machine learning model utilizing the PharmGKB dataset to determine optimal drug dosage recommendations based on distinct patient characteristics.</p>
+                <p>Built a predictive machine learning model utilizing the PharmGKB dataset to determine optimal drug dosage recommendations based on patient characteristics.</p>
                 <div class="tags">
-                    <span class="tag">Bioinformatics</span>
                     <span class="tag">Machine Learning</span>
-                    <span class="tag">Healthcare Data</span>
-                </div>
-            </div>
-            
-            <div class="project">
-                <h3>"HealthierBot" Diet & Calorie Manager</h3>
-                <p>Created a conversational AI chatbot focused on helping users track their diet, manage calorie intake, and maintain healthy eating habits.</p>
-                <div class="tags">
-                    <span class="tag">Chatbot</span>
-                    <span class="tag">App Development</span>
+                    <span class="tag">Feature Engineering</span>
+                    <span class="tag">Bioinformatics</span>
                 </div>
             </div>
         </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jeanette Hauw. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
